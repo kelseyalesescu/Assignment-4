@@ -5,7 +5,7 @@ conda activate blast
 #2 makeblastdb -in /Users/kelsey/Desktop/mystery_proteins.fasta -dbtype prot -out mystery_proteins
 #3 blastn -query /Users/kelsey/Desktop/mystery_nucleotide_query.fasta -task megablast -db mystery_transcripts -out mystery_results.txt -evalue 1e-3 -max_hsps 5 -outfmt 7
 #4 T010027234997
-#5 awk '$3 >= .90' /Users/kelsey/Desktop/mystery_results.txt |awk '{print $2}' > most_similar.txt
+#5 awk '$3 >= 90' /Users/kelsey/Desktop/mystery_results.txt |awk '{print $2}' > most_similar.txt
 #6 blastp -query /Users/kelsey/Desktop/mystery_protein_query.fasta -db mystery_proteins -out protein_results.txt -evalue 1e-5 -max_hsps 15 -outfmt 7 
 #7 P010027090796 P010027090798 P01002707386 P010027077695
 #8 Coffea arabica
